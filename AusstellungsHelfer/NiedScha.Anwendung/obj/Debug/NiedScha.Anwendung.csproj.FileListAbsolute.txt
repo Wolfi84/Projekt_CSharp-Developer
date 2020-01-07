@@ -1,0 +1,12 @@
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Debug\NiedScha.Anwendung.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Debug\NiedScha.Anwendung.csproj.GenerateResource.cache
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\bin\Debug\NiedScha.Anwendung.dll
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\bin\Debug\NiedScha.Anwendung.pdb
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\bin\Debug\de\NiedScha.Anwendung.resources.dll
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Debug\NiedScha.Anwendung.Properties.Resources.resources
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Debug\NiedScha.Anwendung.Properties.Resources.de.resources
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Debug\de\NiedScha.Anwendung.resources.dll
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Debug\NiedScha.Anwendung.dll
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Debug\NiedScha.Anwendung.pdb
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Debug\NiedScha.Anwendung.csprojAssemblyReference.cache
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Debug\NiedScha.Anwendung.Properties.Resource1.resources

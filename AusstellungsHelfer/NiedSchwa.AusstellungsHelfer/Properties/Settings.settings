@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NiedSchwa.AusstellungsHelfer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AktuelleSprache" Type="System.String" Scope="User">
+      <Value Profile="(Default)">de</Value>
+    </Setting>
+    <Setting Name="AktuelleAufgabe" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="LoggingEinAus" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SqlServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">(LocalDB)\MSSQLLocalDB</Value>
+    </Setting>
+    <Setting Name="Datenbank" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AusstellungsDaten</Value>
+    </Setting>
+    <Setting Name="DatenbankPfad" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\..\Datenbank</Value>
+    </Setting>
+    <Setting Name="Veranstaltungsort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Test</Value>
+    </Setting>
+    <Setting Name="DatenbankPfadExe" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Datenbank</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="											View Model">
+    <Position X="1.284" Y="2.633" Height="0.495" Width="11.515" />
+  </Comment>
+  <Class Name="NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager">
+    <Position X="10.5" Y="6.25" Width="2" />
+    <Members>
+      <Field Name="_AktuelleAufgabe" Hidden="true" />
+      <Field Name="_Aufgaben" Hidden="true" />
+      <Field Name="_FensterTyp" Hidden="true" />
+      <Field Name="_GesamtBestellungsViewModel" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAiAQAAQggAAAAAAIAAJQAAACSAAQBAAAAA=</HashCode>
+      <FileName>ViewModels\FensterManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel">
+    <Position X="0.5" Y="6.25" Width="2" />
+    <Members>
+      <Field Name="_DatumBis" Hidden="true" />
+      <Method Name="_DatumPrüfen" Hidden="true" />
+      <Field Name="_DatumVon" Hidden="true" />
+      <Field Name="_GesammtbestellungDrucken" Hidden="true" />
+      <Field Name="_GesamtBuchListe" Hidden="true" />
+      <Method Name="_GesamtBuchlisteAktualisieren" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BAAAQAIBAACAABAAAAAAAEIACAAAAAACCAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\GesamtBestellungsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.ViewModels.BasisViewModel">
+    <Position X="4.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BasisViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel">
+    <Position X="3" Y="6.25" Width="2" />
+    <Members>
+      <Field Name="_AktuelleKunden" Hidden="true" />
+      <Field Name="_AktuellerKunde" Hidden="true" />
+      <Field Name="_KundeAnlegen" Hidden="true" />
+      <Field Name="_KundenfelderLeeren" Hidden="true" />
+      <Field Name="_KundenSuchName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEAEABigAQAAAAAAAAEAQAAAAAAAAAAAAAEAgQAgCAA=</HashCode>
+      <FileName>ViewModels\KundenViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel">
+    <Position X="8" Y="6.25" Width="2" />
+    <Members>
+      <Field Name="_AktuellePreisgruppe" Hidden="true" />
+      <Field Name="_AlleBücherAbrufen" Hidden="true" />
+      <Field Name="_Buch" Hidden="true" />
+      <Field Name="_Bücher" Hidden="true" />
+      <Field Name="_BuchSpeichern" Hidden="true" />
+      <Field Name="_Preisgruppen" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAmAAABAEAAACAAABAAAAABEAgAABAUgAA=</HashCode>
+      <FileName>ViewModels\AdministratorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel">
+    <Position X="5.25" Y="6.25" Width="2" />
+    <Members>
+      <Field Name="_AktuelleBestellung" Hidden="true" />
+      <Field Name="_AktuellesBuch" Hidden="true" />
+      <Field Name="_AnzahlBücherSoll" Hidden="true" />
+      <Field Name="_Bestellungen" Hidden="true" />
+      <Field Name="_BestellungSpeichern" Hidden="true" />
+      <Field Name="_Bücher" Hidden="true" />
+      <Field Name="_BuchHinzufügen" Hidden="true" />
+      <Field Name="_Buchnummer" Hidden="true" />
+      <Field Name="_BuchPositionLöschen" Hidden="true" />
+      <Field Name="_GesuchtesBuch" Hidden="true" />
+      <Field Name="_NeueBestellungAnlegen" Hidden="true" />
+      <Field Name="_PositionÄndern" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgAAQAiAEoQgAAAgABQAAgAAAgCEAABAABAERwAEABg=</HashCode>
+      <FileName>ViewModels\BestellungsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

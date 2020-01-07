@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="			    Model">
+    <Position X="1.91" Y="0.5" Height="0.513" Width="4.87" />
+  </Comment>
+  <Comment CommentText="				Daten Taransfer Objekte&#xD;&#xA;					  DTOs">
+    <Position X="11.909" Y="0.5" Height="0.75" Width="6.728" />
+  </Comment>
+  <Comment CommentText="			   Controller">
+    <Position X="1.687" Y="7.116" Height="0.513" Width="4.87" />
+  </Comment>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.Controller.BestellunsSQLController">
+    <Position X="3" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAQAAAAIAAAAAAAAEgEAAgAAAAAQAQAAgABAAgAg=</HashCode>
+      <FileName>Models\Controller\BestellunsSQLController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.DTOs.Bestellung">
+    <Position X="10.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAACAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Models\DTOs\Bestellung.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.DTOs.Buch">
+    <Position X="17.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAABBAEAAAAAAAAAAQAAAAAAAEAAAAAIAAQAAA=</HashCode>
+      <FileName>Models\DTOs\Buch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.DTOs.Kunde">
+    <Position X="15.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAACQAAAAAABCAAUgAAAAAAAAAAAAABAAAAAAgQAAAA=</HashCode>
+      <FileName>Models\DTOs\Kunde.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.Manager.AufgabenManager">
+    <Position X="5.5" Y="3.5" Width="2" />
+    <Members>
+      <Field Name="_Liste" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Manager\AufgabenManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.Manager.BestellungsManager">
+    <Position X="3" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAACAAAAAAACAAQABAABAAgAAAAAAAgAAAAAAAgAA=</HashCode>
+      <FileName>Models\Manager\BestellungsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.DTOs.Aufgabe">
+    <Position X="13" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQQAAAAAAAAAAAAAAAAACIA=</HashCode>
+      <FileName>Models\DTOs\Aufgaben.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.Manager.DokumentManager">
+    <Position X="5.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Manager\DokumentManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.Manager.BasisDatenManger">
+    <Position X="2" Y="1.75" Width="2" />
+    <Members>
+      <Field Name="_Controller" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Manager\BasisDatenManger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.Manager.KundenManager">
+    <Position X="0.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAACAAAAAAAg=</HashCode>
+      <FileName>Models\Manager\KundenManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.AusstellungsHelfer.Models.DTOs.BuchPreisgruppe">
+    <Position X="17.75" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\DTOs\BuchPreisgruppe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="NiedSchwa.AusstellungsHelfer.Models.DTOs.BestellStatus">
+    <Position X="10.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAACAAAAAAAAAAAAAAAABAAAgAAAAAAAA=</HashCode>
+      <FileName>Models\DTOs\Bestellung.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

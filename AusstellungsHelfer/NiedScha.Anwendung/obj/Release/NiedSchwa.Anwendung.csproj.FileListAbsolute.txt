@@ -1,0 +1,11 @@
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\bin\Release\NiedSchwa.Anwendung.dll
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\bin\Release\NiedSchwa.Anwendung.pdb
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\bin\Release\de\NiedSchwa.Anwendung.resources.dll
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Release\NiedSchwa.Anwendung.Properties.Resource.resources
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Release\NiedSchwa.Anwendung.Properties.Resource.de.resources
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Release\NiedSchwa.Anwendung.csproj.GenerateResource.cache
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Release\NiedSchwa.Anwendung.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Release\de\NiedSchwa.Anwendung.resources.dll
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Release\NiedSchwa.Anwendung.dll
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Release\NiedSchwa.Anwendung.pdb
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedScha.Anwendung\obj\Release\NiedSchwa.Anwendung.csprojAssemblyReference.cache

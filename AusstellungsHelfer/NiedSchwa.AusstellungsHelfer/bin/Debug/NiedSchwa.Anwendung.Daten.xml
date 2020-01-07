@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NiedSchwa.Anwendung.Daten</name>
+    </assembly>
+    <members>
+        <member name="T:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext">
+            <summary>
+            Stellt die Infrastruktur für eine Datenbankanwendung bereit.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext._Protokoll">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext.Protokoll">
+            <summary>
+            Ruft den Dienst zum Verwalten des
+            Anwendungsprotokolls ab.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext.Erzeuge``1">
+            <summary>
+            Gibt ein initialisiertes Anwendungsobjekt zurück.
+            </summary>
+            <typeparam name="T">Der Anwendungstyp, der benötigt wird.</typeparam>
+            <remarks>Hinterlegt zusätzlich einen Protokolleintrag,
+            dass ein neues Objekt initialisiert wurde.</remarks>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext._Zufallsgenerator">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext.Zufallsgenerator">
+            <summary>
+            Ruft den Zufallsgenerator der Anwendung ab.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext._SqlServer">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext.SqlServer">
+            <summary>
+            Ruft den Namen des SQL Servers ab,
+            auf dem die Datenbank läuft,
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext._SqlServerDatenbank">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext.SqlServerDatenbank">
+            <summary>
+            Ruft den Namen der SQL Server Datenbank ab,
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext._DatenbankPfad">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext.DatenbankPfad">
+            <summary>
+            Ruft den Speicherort der SQL Server Datenbank ab,
+            wenn die Datenbank dynamisch angehängt werden soll,
+            oder legt diesen fest.
+            </summary>
+            <remarks>Diese Eigenschaft leer lassen, wenn
+            die Datenbank fix am Server angehängt ist.</remarks>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext.Erzeuge(System.Type)">
+            <summary>
+            Gibt ein initialisiertes Anwendungsobjekt zurück.
+            </summary>
+            <param name="klasse">Der Anwendungstyp, der benötigt wird.</param>
+            <remarks>Hinterlegt zusätzlich einen Protokolleintrag,
+            dass ein neues Objekt initialisiert wurde.</remarks>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.DatenAnwendungskontext.Dispatcher">
+            <summary>
+            Ruft den Thread-Dienst einer
+            WPF Anwendung ab oder legt diesen fest.
+            </summary>
+            <remarks>Notwendig, damit das Hinzufügen
+            von Protokolleinträgen für WPF threadsicher wird.</remarks>
+        </member>
+        <member name="T:NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt">
+            <summary>
+            Untersützt alle Datenbank Anwendungsobjekte.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt.AppKontext">
+            <summary>
+            Ruft das Infrastrukturobjekt der Datenbankanwendung
+            ab oder legt dieses fest.
+            </summary>
+            <remarks>Als Feld wird die Eigenschaft 
+            der Basisklasse benutzt.</remarks>
+        </member>
+        <member name="E:NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt.PropertyChanged">
+            <summary>
+            Wird ausgelöst, wenn sich der Inhalt einer
+            Eigenschaft geändert hat.
+            </summary>
+            <remarks>Notwendig für die WPF Datenbindung.</remarks>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt.OnPropertyChanged(System.String)">
+            <summary>
+            Löst das Ereignis PropertyChanged aus.
+            </summary>
+            <param name="name">Die Bezeichnung der Eigenschaft,
+            deren Inhalt geändert wurde.</param>
+            <remarks>Eine fehlende name-Einstellung wird mit dem
+            Aufrufernamen voreingestellt.</remarks>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt._BinBeschäftigtEbene">
+            <summary>
+            Wird vom AktiviereBeschäftigt erhöht
+            und vom DeaktivereBeschäftigt vermindert.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt.AktiviereBeschäftigt(System.String)">
+            <summary>
+            Schreibt in das Protokoll, dass eine
+            Methode zu laufen beginnt...
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt.DeaktiviereBeschäftigt(System.String)">
+            <summary>
+            Schreibt in das Protokoll, dass eine
+            Methode beendet ist.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt._BinBeschäftigt">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt.BinBeschäftigt">
+            <summary>
+            Ruft einen Wahrheitswert ab,
+            der angibt, ob die Anwendung gerade arbeitet,
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.Anwendung.Daten.DatenbankObjekt">
+            <summary>
+            Stellt die Grundlage bereit für Objekte,
+            die einen SQL Server Datenbankzugriff benötigen.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.DatenbankObjekt._ConnectionString">
+            <summary>
+            Internes Feld für die gecachte Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.DatenbankObjekt.ConnectionString">
+            <summary>
+            Ruft die Verbindungszeichenfolge für
+            den in der Infratstruktur eingestellten
+            SQL Server und Datenbank ab.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.Anwendung.Daten.Erweiterungen.Werkzeugkiste">
+            <summary>
+            Stellt diverse Hilfsmethoden als Erweiterungen bereit.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.Erweiterungen.Werkzeugkiste.ErzeugePfad(System.String,System.String)">
+            <summary>
+            Gibt eine absolute Pfadangabe zurück.
+            </summary>
+            <param name="endeTeil">Eine relative Pfadangabe</param>
+            <param name="basisTeil">Der absolute Pfad, mit dem der Pfad beginnen soll.</param>
+            <returns>Eine absolute Pfadangabe bestehend aus Basis- und Endeteil.</returns>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.Erweiterungen.Werkzeugkiste.WechselnZu``1(System.Object)">
+            <summary>
+            Gibt den Inhalt der Quelle als gewünschten Typ zurück.
+            </summary>
+            <typeparam name="T">Der gewünschte Typ der Quelle.</typeparam>
+            <param name="quelle">Die Daten, deren Typ gewechselt werden soll.</param>
+            <remarks>Dabei wird eine "tiefe" Kopie der Quelle erzeugt.</remarks>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.Erweiterungen.Werkzeugkiste._WechselnZuBeschreibung">
+            <summary>
+            Damit die Methodenbeschreibung nicht jedes Mal ermittelt werden muss...
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.Erweiterungen.Werkzeugkiste.WechselnZu(System.Object,System.Type)">
+            <summary>
+            Gibt den Inhalt der Quelle als gewünschten Typ zurück.
+            </summary>
+            <param name="quelle">Die Daten, deren Typ gewechselt werden soll.</param>
+            <param name="typ">Der gewünschte Zieltyp</param>
+            <remarks>Dabei wird eine "tiefe" Kopie der Quelle erzeugt.</remarks>
+        </member>
+        <member name="T:NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweisListe">
+            <summary>
+            Stellt eine Auflistung von SchwacherMethodenVerweis-Objekten bereit.
+            </summary>
+        </member>
+        <member name="E:NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweisListe.NichtStornierteRückrufe">
+            <summary>
+            Wird ausgelöst, wenn Rückrufmethoden automatisch
+            gelöscht wurden, weil der Besitzer nicht mehr existiert.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweisListe.OnNichtStornierteRückrufe">
+            <summary>
+            Löst das NichtStornierteRückrufe Ereignis aus.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweisListe._ToteRückrufe">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweisListe.ToteRückrufe">
+            <summary>
+            Ruft die Liste mit den Einträgen ab,
+            der Besitzer nicht mehr vorhanden ist.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweisListe.AlleAusführen">
+            <summary>
+            Ruft alle hinterlegen Methoden auf.
+            </summary>
+            <remarks>Methoden, deren Besiter nicht
+            mehr vorhanden ist, werden automatisch
+            entfern.</remarks>
+        </member>
+        <member name="T:NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweis">
+            <summary>
+            Kapselt eine Methode ohne die 
+            Garbage Collection davon abzuhalten,
+            den Besitzer zu entfernen.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweis._Methode">
+            <summary>
+            Internes Feld zum Kapseln der Methode
+            ohne die Garbage Collection an der Freigabe zu hindern.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweis.#ctor(System.Action)">
+            <summary>
+            Initialisiert ein neues Objekt.
+            </summary>
+            <param name="methode">Ein Delegate, der in diesem
+            Objekt gekapselt werden soll, ohne die Garbage Collection zu blockieren.</param>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweis.AufrufDelegate">
+            <summary>
+            Ruft die Methode ab, die in
+            diesem Objekt gekapselt ist.
+            </summary>
+            <remarks>null, falls der Besitzer nicht mehr lebt.</remarks>
+        </member>
+        <member name="T:NiedSchwa.Anwendung.Daten.ProtokollEintragTyp">
+            <summary>
+            Listet unterschiedliche
+            Varianten von Protokolleinträgen auf.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollEintragTyp.Normal">
+            <summary>
+            Kennzeichnet einen Hinweis im Protkoll.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollEintragTyp.NeueInstanz">
+            <summary>
+            Kennzeichnet einen Eintrag,
+            der auf ein neues Objekt hinweist.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollEintragTyp.Warnung">
+            <summary>
+            Kennzeichnet einen Eintrag, der
+            beachtet werden soll.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollEintragTyp.Fehler">
+            <summary>
+            Kennzeichnet einen Eintrag
+            wegen einer Ausnahme.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollEintragTyp.Beschäftigt">
+            <summary>
+            Kennzeichnet einen Eintrag,
+            wenn die Anwendung eine Arbeit beginnt
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.Anwendung.Daten.ProtokollEintragListe">
+            <summary>
+            Stellt eine Liste von Protokolleinträgen bereit.
+            </summary>
+            <remarks>Für die WPF Datenbindung ist die
+            ObservableCollection zu bevorzugen.</remarks>
+        </member>
+        <member name="T:NiedSchwa.Anwendung.Daten.ProtokollEintrag">
+            <summary>
+            Beschreibt eine Protokollzeile.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollEintrag._ErstelltUm">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.ProtokollEintrag.ErstelltUm">
+            <summary>
+            Ruft den Zeitpunkt ab, zu dem
+            der Eintrag erstellt wurde, oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.ProtokollEintrag.Typ">
+            <summary>
+            Ruft die Art des Eintrags ab
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.ProtokollEintrag.Text">
+            <summary>
+            Ruft den Informationstext des
+            Eintrags ab oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.Anwendung.Daten.ProtokollManager">
+            <summary>
+            Stellt einen Dienst zum Verwalten eines
+            Anwendungsprotokolls bereit.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollManager._Liste">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.ProtokollManager.Liste">
+            <summary>
+            Ruft die Protokolleinträge ab.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.ProtokollManager.Eintragen(System.String)">
+            <summary>
+            Fügt dem Protokoll einen normalen Eintrag hinzu.
+            </summary>
+            <param name="text">Die Information, die im Protokoll stehen soll.</param>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.ProtokollManager.Eintragen(System.String,NiedSchwa.Anwendung.Daten.ProtokollEintragTyp)">
+            <summary>
+            Fügt dem Protokoll einen Eintrag hinzu.
+            </summary>
+            <param name="text">Die Information, die im Protokoll stehen soll.</param>
+            <param name="typ">Die Art des Eintrags.</param>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.ProtokollManager.Eintragen(NiedSchwa.Anwendung.Daten.ProtokollEintrag)">
+            <summary>
+            Fügt dem Protokoll einen Eintrag hinzu.
+            </summary>
+            <param name="zeile">Der Protokolleintrag, der erstellt werden soll.</param>
+            <remarks>Die Threadsicherheit ist für WPF Anwendungen,
+            wenn in der Infrastruktur der Dispatcher eingestellt ist, 
+            gewährleistet, sonst nicht.</remarks>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollManager._Rückrufe">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.ProtokollManager.Rückrufe">
+            <summary>
+            Ruft die Liste zum Sammeln der abonnierten
+            Rückmethoden ab.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.ProtokollManager.AbonniereRückruf(System.Action)">
+            <summary>
+            Bittet den ProtokollManager bei einem
+            neuen Eintrag die angegebene Methode auszuführen.
+            </summary>
+            <param name="rückrufMethode">Die Methode, die 
+            bei einem neuen Protokoll aufgerufen werden soll.</param>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.ProtokollManager.StorniereRückruf(System.Action)">
+            <summary>
+            Bittet den ProtokollManager die angegebene Methode 
+            nicht mehr auszuführen.
+            </summary>
+            <param name="rückrufMethode">Die Methode, die 
+            nicht mehr aufgerufen werden soll.</param>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollManager._FehlerVorhanden">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.ProtokollManager.FehlerVorhanden">
+            <summary>
+            Ruft einen Wahrheitswert ab,
+            ob im Protokoll ein unbestätigter
+            Fehler vorhanden oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollManager._FehlerPulsierend">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.ProtokollManager.FehlerPulsierend">
+            <summary>
+            Ruft einen pulisierenden Wahrheitswert
+            ab, wenn ein unbestätigter Fehler im
+            Protokoll vorhanden ist.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollManager._FehlerPulsierendLäuft">
+            <summary>
+            Interes Hilfsfeld für die Methode, die
+            in einem eigenen Thread FehlerPulsierend berechnet.
+            </summary>
+            <remarks>Solche Methoden heißen "Asynchron"</remarks>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.ProtokollManager.FehlerPulsierenAsync">
+            <summary>
+            Wechselt im Intervall von einer 1/2 Sekunde
+            FehlerPulsierend von True auf False
+            solange unbestätigte Fehler vorhanden sind.
+            </summary>
+            <remarks>Kennzeichen von Methoden, die
+            in einem eigenen Thread laufen, ist Suffix "Async"</remarks>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollManager._Pfad">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.ProtokollManager.Pfad">
+            <summary>
+            Ruft den vollständigten Dateinamen
+            der Protokolldatei ab, die zum Speichern
+            eines neuen Eintrags benutzt werden soll,
+            oder legt diesen fest.
+            </summary>
+            <remarks>Sollen die Protkolleinträge nicht
+            gespeichert, die Einstellung leer lassen.</remarks>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.ProtokollManager.Speichern(NiedSchwa.Anwendung.Daten.ProtokollEintrag)">
+            <summary>
+            Schreibt den Inhalt des Eintrags in
+            die im Pfad angegebene Textdatei.
+            </summary>
+            <param name="eintrag">Protokolleintrag, der gespeichert werden soll.</param>
+            <remarks>Sollten beim Speichern Fehler auftreten,
+            wird die Funktion automatisch deaktiviert.</remarks>
+        </member>
+        <member name="M:NiedSchwa.Anwendung.Daten.ProtokollManager.Zusammenräumen(System.Int32)">
+            <summary>
+            Komprimiert das aktuelle Protkoll und
+            erstellt ein neues.
+            </summary>
+            <param name="maxGenerationen">Die Anzahl der
+            aufzubewahrenden alten Protokolle in den Zips.</param>
+        </member>
+        <member name="F:NiedSchwa.Anwendung.Daten.ProtokollManager._MaximaleLängeProtokollTyp">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.Anwendung.Daten.ProtokollManager.MaximaleLängeProtokollTyp">
+            <summary>
+            Ruft die Anzahl der Zeichen des
+            längsten ProtkollEintragTyp-Eintrags ab.
+            </summary>
+        </member>
+    </members>
+</doc>

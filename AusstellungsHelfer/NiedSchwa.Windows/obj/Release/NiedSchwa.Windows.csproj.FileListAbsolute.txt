@@ -1,0 +1,6 @@
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedSchwa.Windows\bin\Release\NiedSchwa.Windows.dll
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedSchwa.Windows\bin\Release\NiedSchwa.Windows.pdb
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedSchwa.Windows\obj\Release\NiedSchwa.Windows.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedSchwa.Windows\obj\Release\NiedSchwa.Windows.dll
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedSchwa.Windows\obj\Release\NiedSchwa.Windows.pdb
+C:\Users\User\Documents\Projekte\BuchAusstellungsHelfer\AusstellungsHelfer\NiedSchwa.Windows\obj\Release\NiedSchwa.Windows.csprojAssemblyReference.cache

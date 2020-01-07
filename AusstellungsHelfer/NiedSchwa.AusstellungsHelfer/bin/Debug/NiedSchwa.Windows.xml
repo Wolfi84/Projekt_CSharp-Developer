@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NiedSchwa.Windows</name>
+    </assembly>
+    <members>
+        <member name="T:NiedSchwa.Windows.Befehl">
+            <summary>
+            Stellt für WPF einen Befehl bereit,
+            der für die Datenbindung benutzt werden kann.
+            </summary>
+        </member>
+        <member name="E:NiedSchwa.Windows.Befehl.CanExecuteChanged">
+            <summary>
+            Wird ausgelöst, wenn sich der Zustand
+            des Befehls von "Erlaubt" auf "Nicht erlaubt"
+            oder umgekehrt ändert.
+            </summary>
+            <remarks>Wird mit dem WPF CommandManager verknüpft.</remarks>
+        </member>
+        <member name="F:NiedSchwa.Windows.Befehl._CanExecuteMethode">
+            <summary>
+            Internes Feld für die Methode,
+            die prüft, ob der Befehl aktuell 
+            ausgeführt werden darf.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Windows.Befehl.CanExecute(System.Object)">
+            <summary>
+            Gibt einen Wahrheitswert zurück,
+            ob der Befehl aktuell ausgeführt werden darf.
+            </summary>
+            <param name="parameter">Zusatzdaten der Datenbindung.</param>
+        </member>
+        <member name="F:NiedSchwa.Windows.Befehl._ExecuteMethode">
+            <summary>
+            Internes Feld für die gekapselte
+            Methode, die dieser Befehl ausführen soll.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.Windows.Befehl.Execute(System.Object)">
+            <summary>
+            Wird aufgerufen, wenn der Befehl ausgeführt wird.
+            </summary>
+            <param name="parameter">Zusatzdaten der Datenbindung</param>
+        </member>
+        <member name="M:NiedSchwa.Windows.Befehl.#ctor(System.Action{System.Object})">
+            <summary>
+            Initialisiert ein neues Befehl-Objekt.
+            </summary>
+            <param name="executeMethode">Die Methode, die ausgeführt
+            werden soll, wenn der Befehl benutzt wird.</param>
+        </member>
+        <member name="M:NiedSchwa.Windows.Befehl.#ctor(System.Action{System.Object},System.Predicate{System.Object})">
+            <summary>
+            Initialisiert ein neues Befehl-Objekt.
+            </summary>
+            <param name="executeMethode">Die Methode, die ausgeführt
+            werden soll, wenn der Befehl benutzt wird.</param>
+            <param name="canExecuteMethode">Die Methode, die prüft,
+            ober der Befehl aktuell ausgeführt werden darf.</param>
+        </member>
+    </members>
+</doc>

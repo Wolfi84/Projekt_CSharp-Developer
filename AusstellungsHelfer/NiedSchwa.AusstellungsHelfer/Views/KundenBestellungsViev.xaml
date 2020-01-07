@@ -1,0 +1,357 @@
+﻿<UserControl x:Class="NiedSchwa.AusstellungsHelfer.KundenBestellungsViev"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NiedSchwa.AusstellungsHelfer" 
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="450" d:DesignWidth="950"
+             DataContext="{Binding BestellungsViewModel}"
+             >
+    <Grid >
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="90"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition />
+            <RowDefinition MinHeight="150"/>
+
+        </Grid.RowDefinitions>
+
+
+        <!-- Bestellnummer -->
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               Content="Bestell Nr°"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="-5,0,0,0"
+               />
+
+        <!-- Kunde -->
+        <Label
+               Grid.Row="0"
+               Grid.Column="3"
+               Content="Kunde"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="15,0,0,0"
+               />
+
+        <!--Anzahl -->
+        <Label Grid.Row="1"
+               Grid.Column="0"
+               Content="Anzahl "
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="-5,0,0,0"
+               />
+
+        <!-- Buchnummer-->
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Content="Buchnummer"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="-5,0,0,0"
+               />
+
+        <!--Buchtitel -->
+        <Label Grid.Row="1"
+               Grid.Column="2"
+               Content="Buchtitel "
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="-5,0,0,0"
+               />
+
+        <!-- Autor-->
+        <Label Grid.Row="1"
+               Grid.Column="3"
+               Content="Autor"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="-5,0,0,0"
+               />
+
+        <!--Verlag -->
+        <Label Grid.Row="1"
+               Grid.Column="4"
+               Content="Verlag "
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               
+               Margin="-5,0,0,0"
+               />
+
+        <!--Buchpreis-->
+        <Label Grid.Row="1"
+               Grid.Column="5"
+               Content="Buchpreis"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="-5,0,0,0"
+               />
+
+        <!--Rabattgruppe-->
+        <Label Grid.Row="1"
+               Grid.Column="6"
+               Content="Rabattgruppe"
+               VerticalAlignment="Center" 
+               HorizontalAlignment="Left"
+               Margin="-5,0,0,0"
+               />
+
+
+        <!-- Bestellnummer-->
+        <TextBox Grid.Row="0"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Height="25"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Text="{Binding AktuelleBestellung.Auftragsnummer}"
+                 ToolTipService.InitialShowDelay="1000"
+                 ToolTip="Bestellnummer wird bei einer neuen Bestellung automatisch vergeben"
+                 IsReadOnly="True"
+                 Background="LightGray"
+        />
+
+        <!-- Kunde-->
+        <TextBox Grid.Row="0"
+                 Grid.Column="3"
+                 Grid.ColumnSpan="4"
+                 Height="25"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Margin="60,0,0,0"
+                 Text="{Binding FensterManager.KundenViewModel.AktuellerKunde.Nachname, NotifyOnSourceUpdated=True}"
+                 ToolTipService.InitialShowDelay="1000"
+                 ToolTip="Kundendaten in gekürzter Version"
+                 IsReadOnly="True"
+                 Background="LightGray"
+        />
+
+        <!--    Gesuchtes Buch  -->
+        <!-- Anzahl-->
+        <TextBox Grid.Row="2"
+                 Grid.Column="0"
+                 Height="25"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Text="{Binding AnzahlBücherSoll, UpdateSourceTrigger=LostFocus}"
+                 />
+
+        <!-- Buchnummer-->
+        <TextBox Grid.Row="2"
+                 Grid.Column="1"
+                 Height="25"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Text="{Binding Buchnummer, UpdateSourceTrigger=PropertyChanged}"
+                 />
+
+        <!-- Buchtitel-->
+        <TextBox Grid.Row="2"
+                 Grid.Column="2"
+                 Height="25"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Background="LightGray"
+                 Text="{Binding GesuchtesBuch.Name}"
+                 IsReadOnly="True"
+                 
+                 />
+
+        <!-- Autor-->
+        <TextBox Grid.Row="2"
+                 Grid.Column="3"
+                 Height="25"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Background="LightGray"
+                 Text="{Binding GesuchtesBuch.Autor}"
+                 IsReadOnly="True"
+                 />
+
+        <!-- Verlag-->
+        <TextBox Grid.Row="2"
+                 Grid.Column="4"
+                 Height="25"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Background="LightGray"
+                 Text="{Binding GesuchtesBuch.Verlag}"
+                 IsReadOnly="True"
+                 />
+
+        <!-- Buchpreis-->
+        <TextBox Grid.Row="2"
+                 Grid.Column="5"
+                 Height="25"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Background="LightGray"
+                 Text="{Binding GesuchtesBuch.Preis, StringFormat=\{0:F\}}"
+                 IsReadOnly="True"
+                 />
+
+        <!-- Rabattgruppe-->
+        <TextBox Grid.Row="2"
+                 Grid.Column="6"
+                 Height="25"
+                 VerticalAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Background="LightGray"
+                 Text="{Binding GesuchtesBuch.BuchPreisgruppe.Preisgruppe, NotifyOnSourceUpdated=True}"
+                 IsReadOnly="True"
+                 />
+
+        <!--Position hinzufügen-->
+        <Button
+            Content="Position hinzufügen"
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="0,0,5,0"
+            Background="#FFB1DE1A"  
+            BorderBrush="DarkGreen"
+            BorderThickness="1"
+            Command="{Binding BuchHinzufügen}"
+            />
+
+        <!--Position löschen-->
+        <Button
+            Content="Position löschen"
+            Grid.Row="4"
+            Grid.Column="2"
+            HorizontalAlignment="Left"
+            Margin="3,0,0,0"
+            Width="145"
+            Background="#FFB1DE1A"
+            Command="{Binding BuchPositionLöschen}"
+            />
+
+
+
+        <!--Position ändern-->
+        <Button
+            Content="Position ändern"
+            Grid.Row="4"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Left"
+            Margin="156,0,0,0"
+            Width="145"
+            Background="#FFB1DE1A"
+            Command="{Binding PositionÄndern}"            
+            />
+
+
+        <!--Bestellung speichern-->
+        <Button
+            Content="Bestellung Speichern"
+            Grid.Row="4"
+            Grid.Column="5" 
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Right"
+            Width="145"
+            Background="White"
+            Command="{Binding BestellungSpeichern}"
+            
+            />
+
+
+
+        <!--Liste zur Ansicht der Bestellpositionen-->
+        <ListView
+            Grid.Row="6"
+            Grid.RowSpan="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="7"
+            
+            ItemsSource="{Binding Bücher}"
+            SelectedItem="{Binding AktuellesBuch, UpdateSourceTrigger=PropertyChanged}"            
+            >
+
+            <!--Ansicht der Listview in Spalten mit Headerbeschriftung-->
+            <ListView.View>
+
+                <GridView>
+                    <GridViewColumn
+                        Header="Buchnummer"
+                        Width="75"                        
+                        DisplayMemberBinding="{Binding Bestellnummer}"
+                        />
+
+                    <GridViewColumn
+                        Header="Autor"
+                        Width="237.5"                        
+                        DisplayMemberBinding="{Binding Autor}"
+                        />
+
+                    <GridViewColumn
+                        Header="Titel"
+                        Width="237.5"
+                        DisplayMemberBinding="{Binding Name}"
+                        />
+
+                    <GridViewColumn
+                        Header="Preis"
+                        Width="50"
+                        DisplayMemberBinding="{Binding Preis, StringFormat=\{0:F\}}"
+                        />
+
+                    <GridViewColumn
+                        Header="Preisgruppe"
+                        Width="70"
+                        DisplayMemberBinding="{Binding BuchPreisgruppe.Preisgruppe, NotifyOnSourceUpdated=True}"
+                        />
+
+                    <GridViewColumn
+                        Header="Prozentsatz"
+                        Width="70"
+                        DisplayMemberBinding="{Binding BuchPreisgruppe.Prozentsatz, NotifyOnSourceUpdated=True}"
+                        />
+
+                    <GridViewColumn
+                        Header="Verlag"
+                        Width="70"
+                        DisplayMemberBinding="{Binding Verlag}"
+                        />
+
+                    <GridViewColumn
+                        Header="Bestellt Stk."
+                        Width="70"
+                        DisplayMemberBinding="{Binding AnzahlBestellt}"
+                        />
+
+                    <GridViewColumn
+                        Header="Geliefert Stk."
+                        Width="70"
+                        DisplayMemberBinding="{Binding AnzahlGeliefert}"
+                        />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

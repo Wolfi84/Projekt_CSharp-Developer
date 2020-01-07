@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which assemblies to include from solution and
+				 project documentation sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{d6eb161d-2916-4c69-b524-324b48ecbf19}</ProjectGuid>
+    <SHFBSchemaVersion>2017.9.26.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
+    <AssemblyName>Documentation</AssemblyName>
+    <RootNamespace>Documentation</RootNamespace>
+    <Name>Documentation</Name>
+    <!-- SHFB properties -->
+    <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
+    <OutputPath>.\Help\</OutputPath>
+    <HtmlHelpName>Dokumentation</HtmlHelpName>
+    <Language>de-DE</Language>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
+    <SyntaxFilters>C#, XAML Usage</SyntaxFilters>
+    <PresentationStyle>VS2013</PresentationStyle>
+    <CleanIntermediates>True</CleanIntermediates>
+    <KeepLogFile>True</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <IndentHtml>False</IndentHtml>
+    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
+    <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
+    <HelpTitle>Buchausstellungs Dokumentation</HelpTitle>
+    <HelpFileVersion>1.0.0.0</HelpFileVersion>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <NamespaceGrouping>False</NamespaceGrouping>
+    <MaximumGroupParts>2</MaximumGroupParts>
+    <Preliminary>False</Preliminary>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <VisibleItems>Protected, ProtectedInternalAsProtected, NonBrowsable</VisibleItems>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\AusstellungsHelfer\AusstellungsHelfer.sln" />
+    </DocumentationSources>
+    <MissingTags>None</MissingTags>
+    <ApiFilter>
+      <Filter entryType="Namespace" fullName="NiedSchwa.Anwendung" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Anwendungskontext" filterName="Anwendungskontext" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Anwendungskontext.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Anwendungsobjekt" filterName="Anwendungsobjekt" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Anwendungsobjekt.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.FehlerAufgetretenEventArgs" filterName="FehlerAufgetretenEventArgs" isExposed="False">
+    <Filter entryType="Property" fullName="NiedSchwa.Anwendung.FehlerAufgetretenEventArgs.Ausnahme" filterName="Ausnahme" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.FensterManager" filterName="FensterManager" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.FensterManager.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.SprachenManager" filterName="SprachenManager" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.SprachenManager.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Verlauf" filterName="Verlauf" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Verlauf.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+</Filter>
+<Filter entryType="Namespace" fullName="NiedSchwa.Anwendung.Daten" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.DatenAnwendungskontext" filterName="DatenAnwendungskontext" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Daten.DatenAnwendungskontext.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt" filterName="DatenAnwendungsobjekt" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.DatenbankObjekt" filterName="DatenbankObjekt" isExposed="False">
+    <Filter entryType="Property" fullName="NiedSchwa.Anwendung.Daten.DatenbankObjekt.ConnectionString" filterName="ConnectionString" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.Fenster" filterName="Fenster" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Daten.Fenster.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.FensterListe" filterName="FensterListe" isExposed="False">
+    <Filter entryType="Method" fullName="NiedSchwa.Anwendung.Daten.FensterListe.Suchen" filterName="Suchen" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.ProtokollEintrag" filterName="ProtokollEintrag" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Daten.ProtokollEintrag.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.ProtokollEintragListe" filterName="ProtokollEintragListe" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Daten.ProtokollEintragListe.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.ProtokollManager" filterName="ProtokollManager" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Daten.ProtokollManager.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweis" filterName="SchwacherMethodenVerweis" isExposed="False">
+    <Filter entryType="Property" fullName="NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweis.AufrufDelegate" filterName="AufrufDelegate" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweisListe" filterName="SchwacherMethodenVerweisListe" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweisListe.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.Sprache" filterName="Sprache" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Daten.Sprache.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Daten.SpracheListe" filterName="SpracheListe" isExposed="False">
+    <Filter entryType="Method" fullName="NiedSchwa.Anwendung.Daten.SpracheListe.Suchen" filterName="Suchen" isExposed="True" />
+  </Filter>
+</Filter>
+<Filter entryType="Namespace" fullName="NiedSchwa.Anwendung.Generisch" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="NiedSchwa.Anwendung.Generisch.XmlController`1" filterName="XmlController`1" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Anwendung.Generisch.XmlController`1.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+</Filter>
+<Filter entryType="Namespace" fullName="NiedSchwa.AusstellungsHelfer" isExposed="False" xmlns="">
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.App" filterName="App" isExposed="False">
+    <Filter entryType="Method" fullName="NiedSchwa.AusstellungsHelfer.App.InitializeComponent" filterName="InitializeComponent" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.AufgabenView" filterName="AufgabenView" isExposed="False">
+    <Filter entryType="Method" fullName="NiedSchwa.AusstellungsHelfer.AufgabenView.InitializeComponent" filterName="InitializeComponent" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.GesamtBestellungsView" filterName="GesamtBestellungsView" isExposed="False">
+    <Filter entryType="Method" fullName="NiedSchwa.AusstellungsHelfer.GesamtBestellungsView.InitializeComponent" filterName="InitializeComponent" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Hauptfenster" filterName="Hauptfenster" isExposed="False">
+    <Filter entryType="Method" fullName="NiedSchwa.AusstellungsHelfer.Hauptfenster.InitializeComponent" filterName="InitializeComponent" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.KundenBestellungsViev" filterName="KundenBestellungsViev" isExposed="False">
+    <Filter entryType="Method" fullName="NiedSchwa.AusstellungsHelfer.KundenBestellungsViev.InitializeComponent" filterName="InitializeComponent" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.KundenView" filterName="KundenView" isExposed="False">
+    <Filter entryType="Method" fullName="NiedSchwa.AusstellungsHelfer.KundenView.InitializeComponent" filterName="InitializeComponent" isExposed="True" />
+  </Filter>
+</Filter>
+<Filter entryType="Namespace" fullName="NiedSchwa.AusstellungsHelfer.Erweiterungen" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Erweiterungen.BuchDatenPrüfer" filterName="BuchDatenPrüfer" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Erweiterungen.BuchDatenPrüfer.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Erweiterungen.EingabeFilter" filterName="EingabeFilter" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Erweiterungen.EingabeFilter.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Erweiterungen.KundenDatenPrüfer" filterName="KundenDatenPrüfer" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Erweiterungen.KundenDatenPrüfer.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+</Filter>
+<Filter entryType="Namespace" fullName="NiedSchwa.AusstellungsHelfer.Models.Controller" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.Controller.BestellunsSQLController" filterName="BestellunsSQLController" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.Controller.BestellunsSQLController.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+</Filter>
+<Filter entryType="Namespace" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Aufgabe" filterName="Aufgabe" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Aufgabe.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Aufgaben" filterName="Aufgaben" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Aufgaben.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Bestellung" filterName="Bestellung" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Bestellung.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Bestellungen" filterName="Bestellungen" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Bestellungen.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Buch" filterName="Buch" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Buch.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Bücher" filterName="Bücher" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Bücher.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.BuchPreisgruppe" filterName="BuchPreisgruppe" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.BuchPreisgruppe.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.BuchPreisgruppen" filterName="BuchPreisgruppen" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.BuchPreisgruppen.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Gesamtbestllung" filterName="Gesamtbestllung" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Gesamtbestllung.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Kunde" filterName="Kunde" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.DTOs.Kunde.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+</Filter>
+<Filter entryType="Namespace" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager.AufgabenManager" filterName="AufgabenManager" isExposed="False">
+    <Filter entryType="Property" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager.AufgabenManager.Liste" filterName="Liste" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager.BasisDatenManger" filterName="BasisDatenManger" isExposed="False">
+    <Filter entryType="Property" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager.BasisDatenManger.Controller" filterName="Controller" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager.BestellungsManager" filterName="BestellungsManager" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager.BestellungsManager.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager.DokumentManager" filterName="DokumentManager" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager.DokumentManager.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager.KundenManager" filterName="KundenManager" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.Models.Manager.KundenManager.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+</Filter>
+<Filter entryType="Namespace" fullName="NiedSchwa.AusstellungsHelfer.ViewModels" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel" filterName="AdministratorViewModel" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.BasisViewModel" filterName="BasisViewModel" isExposed="False">
+    <Filter entryType="Property" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.BasisViewModel.FensterManager" filterName="FensterManager" isExposed="True" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel" filterName="BestellungsViewModel" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager" filterName="FensterManager" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel" filterName="GesamtBestellungsViewModel" isExposed="False" />
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.KundenBestellungsViewModel" filterName="KundenBestellungsViewModel" isExposed="False" />
+  <Filter entryType="Class" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel" filterName="KundenViewModel" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+</Filter>
+<Filter entryType="Namespace" fullName="NiedSchwa.AusstellungsHelfer.Views" isExposed="False" xmlns="" />
+<Filter entryType="Namespace" fullName="NiedSchwa.Windows" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="NiedSchwa.Windows.Befehl" filterName="Befehl" isExposed="True">
+    <Filter entryType="Constructor" fullName="NiedSchwa.Windows.Befehl.#ctor" filterName=".ctor" isExposed="False" />
+  </Filter>
+</Filter></ApiFilter>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
+			 the build.  The others are optional common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+  <!-- The pre-build and post-build event properties must appear *after* the targets file import in order to be
+			 evaluated correctly. -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+</Project>

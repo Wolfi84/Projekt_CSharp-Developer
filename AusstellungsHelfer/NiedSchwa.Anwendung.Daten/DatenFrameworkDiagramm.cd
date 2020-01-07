@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="	Manager">
+    <Position X="8.781" Y="2.01" Height="0.354" Width="1.981" />
+  </Comment>
+  <Comment CommentText="	    DTOs">
+    <Position X="11.5" Y="2" Height="0.354" Width="1.981" />
+  </Comment>
+  <Comment CommentText="	Infrastruktur">
+    <Position X="5.031" Y="0.5" Height="0.354" Width="1.981" />
+  </Comment>
+  <Comment CommentText="	Controller">
+    <Position X="6.021" Y="5.01" Height="0.354" Width="1.981" />
+  </Comment>
+  <Comment CommentText="	Helfer">
+    <Position X="0.5" Y="0.5" Height="0.354" Width="1.981" />
+  </Comment>
+  <Class Name="NiedSchwa.Anwendung.Daten.DatenAnwendungskontext">
+    <Position X="3.75" Y="1.25" Width="2" />
+    <Members>
+      <Field Name="_DatenbankPfad" Hidden="true" />
+      <Field Name="_Protokoll" Hidden="true" />
+      <Field Name="_SqlServer" Hidden="true" />
+      <Field Name="_SqlServerDatenbank" Hidden="true" />
+      <Field Name="_Zufallsgenerator" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQAEAAAAAIAEgAABCAAiAAABAAAAAAAAAQAA=</HashCode>
+      <FileName>DatenKontext\DatenAnwendungskontext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.DatenAnwendungsobjekt">
+    <Position X="6" Y="1.25" Width="2" />
+    <Members>
+      <Field Name="_BinBeschäftigt" Hidden="true" />
+      <Field Name="_BinBeschäftigtEbene" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAICAgAAAUgAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>DatenKontext\DatenAnwendungsobjekt.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.DatenbankObjekt">
+    <Position X="6" Y="5.5" Width="2" />
+    <Members>
+      <Field Name="_ConnectionString" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAACAAAAAAAAA=</HashCode>
+      <FileName>DatenKontext\DatenbankObjekt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweisListe">
+    <Position X="0.5" Y="4.75" Width="2" />
+    <Members>
+      <Field Name="_ToteRückrufe" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAACAAAAACAAICAAAA=</HashCode>
+      <FileName>Helfer\SchwacherMethodenVerweis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.SchwacherMethodenVerweis">
+    <Position X="0.5" Y="3" Width="2" />
+    <Members>
+      <Field Name="_Methode" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAgAAA=</HashCode>
+      <FileName>Helfer\SchwacherMethodenVerweis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.ProtokollEintragListe">
+    <Position X="11.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Protokoll\Protokoll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.ProtokollEintrag">
+    <Position X="11.5" Y="5.5" Width="2" />
+    <Members>
+      <Field Name="_ErstelltUm" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIIAAAAAAAAAAAAAAAAIAAAAAAACAAAAAA=</HashCode>
+      <FileName>Protokoll\Protokoll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.ProtokollManager">
+    <Position X="8.75" Y="2.5" Width="2" />
+    <Members>
+      <Field Name="_FehlerPulsierend" Hidden="true" />
+      <Field Name="_FehlerPulsierendLäuft" Hidden="true" />
+      <Field Name="_FehlerVorhanden" Hidden="true" />
+      <Field Name="_Liste" Hidden="true" />
+      <Field Name="_MaximaleLängeProtokollTyp" Hidden="true" />
+      <Field Name="_Pfad" Hidden="true" />
+      <Field Name="_Rückrufe" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gAAAACEAAAAAIEAAQAABEARAAAQAIAAAAACADAEAAEg=</HashCode>
+      <FileName>Protokoll\ProtokollManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.Erweiterungen.Werkzeugkiste">
+    <Position X="0.5" Y="1.25" Width="2" />
+    <Members>
+      <Field Name="_WechselnZuBeschreibung" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAASAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Werkzeuge\Werkzeugkiste.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="NiedSchwa.Anwendung.Daten.ProtokollEintragTyp">
+    <Position X="11.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABBAAAAAAAAAQgAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Protokoll\Protokoll.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,388 @@
+﻿<UserControl x:Class="NiedSchwa.AusstellungsHelfer.KundenView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NiedSchwa.AusstellungsHelfer"
+             mc:Ignorable="d" 
+             
+              d:DesignHeight="450" d:DesignWidth="950"
+             DataContext="{Binding KundenViewModel}"            
+             >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition  Height="0"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  MinHeight="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+            <RowDefinition  Height="25"/>
+
+        </Grid.RowDefinitions>
+
+        <!--Kunden Suchfeld-->
+        <Label
+            Grid.Column="0"
+            Grid.Row="1"
+            HorizontalAlignment="Left"            
+            VerticalAlignment="Center"
+            Margin="-5,0,0,0"
+            Content="Kunde Suchen:"       
+            />
+
+        <!--Kunden Nachname-->
+        <Label
+            Grid.Column="0"
+            Grid.Row="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="-5,0,0,0"
+            Content="Nachname:"       
+            />
+
+        <!--Kunden Vorname-->
+        <Label
+            Grid.Column="1"
+            Grid.Row="3"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Content="Vorname:"       
+            />
+
+        <!--Kunden Adressdaten-->
+        <Label
+            Grid.Column="0"
+            Grid.Row="5"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="-5,0,0,0"
+            Content="Adressdaten"       
+            />
+
+        <!--Kunden Strasse-->
+        <Label
+            Grid.Column="0"
+            Grid.Row="6"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="-5,0,0,0"
+            Content="Straße:" 
+             />
+
+        <!--Kunden Hausnummer-->
+        <Label
+            Grid.Column="2"
+            Grid.Row="6"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Content="Hausnummer" 
+            Margin="5,0,0,0"
+             />
+
+        <!--Kunden Postleitzahl-->
+        <Label
+            Grid.Column="0"
+            Grid.Row="8"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="-5,0,0,0"
+            Content="Postleitzahl" 
+             />
+
+        <!--Kunden Wohnort-->
+        <Label
+            Grid.Column="1"
+            Grid.Row="8"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Content="Ort:" 
+            Margin="5,0,0,0"
+             />
+
+        <!--Kunden Kontaktdaten-->
+        <Label
+            Grid.Column="0"
+            Grid.Row="10"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="-5,0,0,0"
+            Content="Kontaktdaten" 
+             />
+
+        <!--Kunden Telefonnummer Festnetz-->
+        <Label
+            Grid.Column="0"
+            Grid.Row="11"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="-5,0,0,0"
+            Content="Festnetz:" 
+             />
+
+        <!--Kunden Telefonnummer Mobiltelefon-->
+        <Label
+            Grid.Column="1"
+            Grid.Row="11"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Content="Mobiltelefon:" 
+            Margin="5,0,0,0"
+             />
+
+        <!--Kunden E-Mail Adresse-->
+        <Label
+            Grid.Column="0"
+            Grid.Row="13"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="-5,0,0,0"
+            Content="E-Mail-Adresse:" 
+             />
+
+        <!--Suchfeld für kunden-->
+        <ComboBox
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.Row="2" 
+            IsEditable ="true"    
+            VerticalContentAlignment="Center"
+            ItemsSource="{Binding AktuelleKunden}"
+            Text="{Binding KundenSuchName, UpdateSourceTrigger=PropertyChanged}"
+            SelectedItem="{Binding AktuellerKunde, UpdateSourceTrigger=PropertyChanged}"
+			 ToolTipService.InitialShowDelay="1000"
+            ToolTip="Eingabe des Nachnamens oder Kundensuche mittels Nachname"
+            >
+
+            <!--Aufgliederung des Dropdown Menüs zur Darstellung des Gesamtnamens-->
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label
+                            Grid.Column="0"
+                            Content="{Binding Nachname}"
+                 
+                            />
+                        <Label
+                            Grid.Column="1"
+                            Content="{Binding Vorname}"        
+                            />
+
+                    </Grid>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+
+        </ComboBox>
+
+
+        <!--Nachname-->
+        <TextBox
+            Grid.Column="0"
+            Grid.Row="4"             
+            VerticalContentAlignment="Center"
+            Text="{Binding AktuellerKunde.Nachname, UpdateSourceTrigger=LostFocus}"
+			ToolTipService.InitialShowDelay="1000"
+            ToolTip="Eingabefeld für den Vornamen"
+            />
+
+        <!--Vorname-->
+        <TextBox
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.Row="4"  
+            Margin="5,0,0,0"
+            VerticalContentAlignment="Center"
+            Text="{Binding AktuellerKunde.Vorname, UpdateSourceTrigger=LostFocus}"
+			ToolTipService.InitialShowDelay="1000"
+            ToolTip="Eingabefeld für den Vornamen"
+
+            />
+
+        <!--Staße-->
+        <TextBox
+            Grid.ColumnSpan="2"
+            Grid.Row="7"  
+            VerticalContentAlignment="Center"
+            Text="{Binding AktuellerKunde.Straße, UpdateSourceTrigger=LostFocus}"
+			ToolTipService.InitialShowDelay="1000"
+            ToolTip="Eingabefeld für den Straßennamen"
+            />
+
+        <!--Nummer-->
+        <TextBox
+            Grid.Column="2"
+            Grid.Row="7"  
+            Margin="10,0,0,0"
+            VerticalContentAlignment="Center"
+            Text="{Binding AktuellerKunde.HausNummer, UpdateSourceTrigger=LostFocus}" 
+			ToolTipService.InitialShowDelay="1000"
+            ToolTip="Eingabefeld für Hausnummer"
+            />
+
+        <!--Postleitzahl-->
+        <TextBox
+            Grid.Column="0"
+            Grid.Row="9"  
+            VerticalContentAlignment="Center"
+            Text="{Binding  AktuellerKunde.PLZ, UpdateSourceTrigger=LostFocus}"
+			ToolTipService.InitialShowDelay="1000"
+            ToolTip="Eingabefeld für die Postleitzahl"
+            />
+
+        <!--Ort-->
+        <TextBox
+            Grid.Column="1"
+            Grid.ColumnSpan="2"  
+            Grid.Row="9" 
+            Margin="10,0,0,0"
+            VerticalContentAlignment="Center"
+            Text="{Binding AktuellerKunde.Stadt, UpdateSourceTrigger=LostFocus}"
+			ToolTipService.InitialShowDelay="1000"
+            ToolTip="Eingabefeld für den Stadtnamen"
+            />
+
+        <!--Festnetz-->
+        <TextBox
+            Grid.Column="0"
+            Grid.Row="12"  
+            VerticalContentAlignment="Center"
+            Text="{Binding AktuellerKunde.TelNummer, UpdateSourceTrigger=LostFocus}"
+			ToolTipService.InitialShowDelay="1000"
+            ToolTip="Eingabefeld für die Festnetznummer"
+            />
+
+        <!--Mobil-->
+        <TextBox
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.Row="12"        
+            Margin="10,0,0,0"
+            VerticalContentAlignment="Center"
+			ToolTipService.InitialShowDelay="1000"
+            ToolTip="Eingabefeld für die Mobiltelefonnummer"
+            />
+
+        <!--E-Mail-->
+        <TextBox
+            Grid.Column="0"
+            Grid.Row="14"             
+            Grid.ColumnSpan="3"
+            Height="25"
+            VerticalAlignment="Top"
+            Text="{Binding AktuellerKunde.E_Mail, UpdateSourceTrigger=LostFocus}"
+            ToolTipService.InitialShowDelay="1000"
+            ToolTip="Eingabefeld für die E-Mail Adresse"                      
+            />
+
+        <!--Liste zur Ansicht der offenen und abgeschlossenen Bestellungen eines Kunden-->
+        <ListView 
+            Grid.Row="1"
+            Grid.Column="3"
+            Grid.RowSpan="19"
+            VerticalAlignment="Stretch"
+            Margin="3,0,0,0"
+            ToolTipService.InitialShowDelay="1000"
+            ToolTip="Ausgabe aller Kundenbestellungen"
+           
+            ItemsSource="{Binding FensterManager.BestellungsViewModel.Bestellungen, NotifyOnSourceUpdated=True}"
+            SelectedItem="{Binding FensterManager.BestellungsViewModel.AktuelleBestellung, NotifyOnSourceUpdated=True}" 
+            Background="White" 
+            >
+
+            <!--Ansicht der Listview in Spalten mit Headerbeschriftung-->
+            <ListView.View>
+                <GridView 
+                    AllowsColumnReorder="False"
+                    >
+                <GridViewColumn 
+                      Header="Bestellnummer" 
+                      DisplayMemberBinding="{Binding Auftragsnummer}" 
+                      Width="200" 
+                      />
+
+                    <GridViewColumn 
+                      Header="Bestellt am" 
+                      DisplayMemberBinding="{Binding BestellDatum, StringFormat=\{0:dd.MM.yyyy\}}" 
+                      Width="200"
+                      />
+
+                    <GridViewColumn 
+                      Header="Bestellstatus"
+                      DisplayMemberBinding="{Binding BestellStatus}"
+                      Width="200"
+                      />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!--Knopf für die Neuanlage eines Kunden-->
+        <Button
+            Grid.Row="15"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Content="Kundenfelder leeren"
+            Background="#FFB1DE1A"
+            Command="{Binding KundenfelderLeeren}"
+            BorderBrush="DarkGreen"
+            BorderThickness="1"
+            Margin="0,0,0,0.5"
+            />
+
+
+        <!--Knopf für die Neuanlage eines Kunden-->
+        <Button
+            Grid.Row="16"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="1"
+            Content="Neuen Kunden Speichern"
+            VerticalAlignment="Stretch"
+            Background="#FFB1DE1A"
+            Command="{Binding KundeAnlegen}"
+            BorderBrush="DarkGreen"
+            BorderThickness="1"
+            Margin="0,0,0,0.5"
+            />
+
+        <!--Knopf für die Neuanlage einer Kundenbestellung-->
+        <Button
+            Grid.Row="17"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Grid.RowSpan="1"
+            Content="Neue Bestellung"
+            VerticalAlignment="Stretch"
+            Background="#FFB1DE1A"
+            Command="{Binding FensterManager.BestellungsViewModel.NeueBestellungAnlegen}"
+            BorderBrush="DarkGreen"
+            BorderThickness="1"
+            Margin="0,0.5,0,0"
+            />
+    </Grid>
+</UserControl>

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="					    Infrastruktur">
+    <Position X="3.252" Y="0.5" Height="0.46" Width="7.054" />
+  </Comment>
+  <Comment CommentText="					       Manager">
+    <Position X="6.064" Y="2.982" Height="0.46" Width="7.054" />
+  </Comment>
+  <Comment CommentText="					         Controller">
+    <Position X="5.984" Y="4.885" Height="0.46" Width="7.054" />
+  </Comment>
+  <Comment CommentText="			DTOs">
+    <Position X="13.505" Y="0.504" Height="0.46" Width="4.217" />
+  </Comment>
+  <Comment CommentText="	Erweiterungen">
+    <Position X="0.5" Y="0.545" Height="0.46" Width="2.095" />
+  </Comment>
+  <Class Name="NiedSchwa.Anwendung.Controller.FensterXmlController" Collapsed="true">
+    <Position X="9.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\FensterXmlController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Controller.SprachenXmlController" Collapsed="true">
+    <Position X="7.25" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Controller\SprachenXmlController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Generisch.XmlController&lt;T&gt;" Collapsed="true">
+    <Position X="8.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Generisch\XmlController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.FensterListe">
+    <Position X="13.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Daten\Fenster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.Fenster">
+    <Position X="13.5" Y="2.75" Width="2" />
+    <Members>
+      <Field Name="_Name" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAGAAAAIAQAACAAAAAAiAAAAAAAAAA=</HashCode>
+      <FileName>Daten\Fenster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.SpracheListe">
+    <Position X="15.75" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Daten\Sprache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Daten.Sprache">
+    <Position X="15.75" Y="2.75" Width="2" />
+    <Members>
+      <Field Name="_Name" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAgIAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Daten\Sprache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Erweiterungen.Werkzeug">
+    <Position X="0.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Erweiterungen\Werkzeug.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Erweiterungen.AssemblyInfo">
+    <Position X="0.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAACAAAAAABAAAAAAAAQBAAAAAAAAAAAA=</HashCode>
+      <FileName>Erweiterungen\AssemblyInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.FehlerAufgetretenEventArgs">
+    <Position X="2.75" Y="5.5" Width="2" />
+    <Members>
+      <Field Name="_Ausnahme" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FehlerBehandlung\FehlerAufgetreten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Anwendungskontext">
+    <Position X="3.25" Y="1.25" Width="2" />
+    <Members>
+      <Field Name="_AnwendungsdatenPfad" Hidden="true" />
+      <Field Name="_AnwendungsdatenPfadLokal" Hidden="true" />
+      <Field Name="_Anwendungspfad" Hidden="true" />
+      <Field Name="_Fenster" Hidden="true" />
+      <Field Name="_Sprachen" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IgAAAAAAQAAgAAAACAQCAAAAACBCAAAEAAAAAAAAAAQ=</HashCode>
+      <FileName>Kontext\Anwendungskontext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Anwendungsobjekt" Collapsed="true">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAQAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kontext\Anwendungsobjekt.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.FensterManager" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAAQAAAEAAQAAAEEBAAAAAAAAAAAAAEgQAAAA=</HashCode>
+      <FileName>Manager\FensterManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.SprachenManager" Collapsed="true">
+    <Position X="11" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAQAAAEAAQAAAAMAAAAAAAAAACAAACAAAAAA=</HashCode>
+      <FileName>Manager\SprachenManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NiedSchwa.Anwendung.Verlauf">
+    <Position X="0.5" Y="5.5" Width="2" />
+    <Members>
+      <Field Name="_VorwärtsPuffer" Hidden="true" />
+      <Field Name="_ZurückPuffer" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QAAIAACAABAAABAAQAIAABEAgQAAIAAAAAAAAAEgEAA=</HashCode>
+      <FileName>Verlauf\Verlauf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="NiedSchwa.Anwendung.IAppKontext">
+    <Position X="5.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kontext\IAppKontext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="NiedSchwa.Anwendung.FehlerAufgetretenEventHandler">
+    <Position X="2.75" Y="7.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FehlerBehandlung\FehlerAufgetreten.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

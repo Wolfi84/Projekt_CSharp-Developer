@@ -1,0 +1,1419 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NiedSchwa.AusstellungsHelfer</name>
+    </assembly>
+    <members>
+        <member name="T:NiedSchwa.AusstellungsHelfer.App">
+            <summary>
+            Interaktionslogik für "App.xaml"
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Erweiterungen.BuchDatenPrüfer">
+            <summary>
+            Stellt diverse Prüfmethden für die Buchdaten 
+            Validierung zur verfügung.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Erweiterungen.BuchDatenPrüfer.NamePrüfen(System.String)">
+            <summary>
+            Prüft den übergebenen String auf Vorhandensein 
+            von Sonderzeichen und Zahlen
+            </summary>
+            <param name="name"></param>
+            <returns>True wenn eingabe korrekt</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Erweiterungen.BuchDatenPrüfer.AutorPrüfen(System.String)">
+            <summary>
+            Prüft den übergebenen String auf Vorhandensein 
+            von Sonderzeichen.
+            </summary>
+            <param name="name"></param>
+            <returns>True wenn Eingabe korrekt</returns>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Erweiterungen.EingabeFilter">
+            <summary>
+            Stellt Einzelne Zeichensätze für die Eingabe Prüfung zur 
+            verfügung.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Erweiterungen.EingabeFilter._ZeichenFilter">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Erweiterungen.EingabeFilter.ZeichenFilter">
+            <summary>
+            Ruft den Zeichenfilter ab.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Erweiterungen.EingabeFilter._SonderZeichenFilter">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Erweiterungen.EingabeFilter.SonderZeichenFilter">
+            <summary>
+            Ruft den Sonderzeichen Filter ab
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Erweiterungen.EingabeFilter._ZahlenFilter">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Erweiterungen.EingabeFilter.ZahlenFilter">
+            <summary>
+            Ruft den ZahlenFilter ab.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Erweiterungen.KundenDatenPrüfer">
+            <summary>
+            Stellt diverse Prüfmethoden zur KundenValidierung zur verfügung.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Erweiterungen.KundenDatenPrüfer.KundenNamenPrüfen(System.String)">
+            <summary>
+            Prüft einen Namen auf den Inhalt aller Filter.
+            </summary>
+            <param name="name"></param>
+            <returns>True wenn kein Filterzeichen enthalten ist.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Erweiterungen.KundenDatenPrüfer.EmailAdressePrüfen(System.String)">
+            <summary>
+            Prüft die Adresse auf vorhandensein eines @ zeichen.
+            </summary>
+            <param name="eMail">E-Mail String</param>
+            <returns>True wenn eines der zeichen vorhanden ist.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Erweiterungen.KundenDatenPrüfer.TelefonNummerPrüfen(System.String)">
+            <summary>
+            Orüft die Richtigkeit der Eingegebenen nummer.
+            </summary>
+            <param name="nummer">Telefonnummer</param>
+            <returns></returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Erweiterungen.KundenDatenPrüfer.HausnummerPrüfen(System.String)">
+            <summary>
+            Prüft auf Vorhandensein von zahlen
+            </summary>
+            <param name="hausnummer">Hausnummer incl. zusatzzeichen</param>
+            <returns></returns>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Erweiterungen.Werkzeugkiste">
+            <summary>
+            Stellt diverse Erweiterungsmethoden zur verfügung
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Erweiterungen.Werkzeugkiste.Füllen(System.String,System.String,System.Int32)">
+            <summary>
+            Fügt dem ende des Objektes so viele
+            füllzeichen ein bis die maximale länge erreicht
+            wird.
+            </summary>
+            <param name="basis">Das Objekt selbst</param>
+            <param name="füllzeichen">das füllzeichen</param>
+            <param name="maxlänge">maximale Zeichenketten länge</param>
+            <returns> den erweiterten String</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Erweiterungen.Werkzeugkiste.StringPrüfen(System.String,System.String[])">
+            <summary>
+            Prüft den String auf nummern oder Sonderzeichen
+            </summary>
+            <param name="name">Zu Prüfender String</param>
+            <param name="gesuchteZeichen">Gesuchte Zeichen</param>
+            <returns>True wenn eines der gesuchten Zeichen enthalten ist.</returns>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.BuchPreisgruppen">
+            <summary>
+            Stellt eine Liste an Buchpreisgruppendaten
+            zur verfügung.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.BuchPreisgruppe">
+            <summary>
+            Stellt Informationen über die Preisgruppe
+            eines Buches zur Verfügung.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.BuchPreisgruppe.Preisgruppe">
+            <summary>
+            Ruft die Preisgruppe ab oder 
+            legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.BuchPreisgruppe.Prozentsatz">
+            <summary>
+            Ruft den Prozentsatz ab oder 
+            legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.BuchPreisgruppe.PreisgruppenIndex">
+            <summary>
+            Ruft den Index der Preisgruppe ab
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.Gesamtbestllung">
+            <summary>
+            Stellt Informationen zu der
+            Gesammtbestllung bereit.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Model.DTOs.Gesamtbestllung._Veranstaltungsort">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Gesamtbestllung.Veranstaltungsort">
+            <summary>
+            Ruft den Aktuellen Veranstaltungsort auf 
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Model.DTOs.Gesamtbestllung._DatumVon">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Gesamtbestllung.DatumVon">
+            <summary>
+            Ruft Aktuelle Obergrenze des Suchdatumsbereichs ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Model.DTOs.Gesamtbestllung._DatumBis">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Gesamtbestllung.DatumBis">
+            <summary>
+            Ruft Aktuelle Untergrenze des Suchdatumsbereichs ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.Aufgaben">
+            <summary>
+            Stellt eine Liste von Anwendungspunkten bereit.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.Aufgabe">
+            <summary>
+            Beschreibt einen Anwendungspunkt
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Aufgabe.Name">
+            <summary>
+            Ruft den Namen des Anwendungspunkts 
+            ab oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Aufgabe.Symbol">
+            <summary>
+            Ruft das Zeichen ab, das als
+            Symbol für den Anwendungspunkt 
+            benutzt werden soll, oder legt dieses fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Aufgabe.Arbeitsbereich">
+            <summary>
+            Ruft die View ab, die für den
+            Anwendungspunkt benutzt werden soll,
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Aufgabe.ArbeitsbereichTyp">
+            <summary>
+            Ruft den Typ des Steuerelements ab,
+            das für den Arbeitsbereich benutzt wird,
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.BestellStatus">
+            <summary>
+            Listet die unterschiedlichen Bestellstadien
+            auf
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Model.DTOs.BestellStatus.Abgeschlossen">
+            <summary>
+            Kunde hat Bestellung abgeholt
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Model.DTOs.BestellStatus.Neu">
+            <summary>
+            Auftrag wird für Bestellung 
+            vorbereitet
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Model.DTOs.BestellStatus.Bestellt">
+            <summary>
+            Bücher wurden beim Verlag bestellt
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Model.DTOs.BestellStatus.Storniert">
+            <summary>
+            Bestellung wurde vom Kunden oder Verlag
+            Storniert
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellungen">
+            <summary>
+            Stellt Eine Bestellliste zur Verfügung
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellung">
+            <summary>
+            Stellt Informationen einer Bestellung zur Verfügung
+            </summary>  
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellung.Auftragsnummer">
+            <summary>
+            Ruft Die Auftragsnummer ab
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellung.BestellDatum">
+            <summary>
+            Ruft den Zeitpunkt ab an dem die 
+            Bestellung getätigt wurde oder
+            legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellung.BestellStatus">
+            <summary>
+            Ruft Die Bestellnummmer ab
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.Bücher">
+            <summary>
+            Stellt eine Liste von Bücher Objekten
+            zur verfügung
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch">
+            <summary>
+            Stellt Informationen eines Buches
+            zur Verfügung
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch.Bestellnummer">
+            <summary>
+            Ruft die Bestellnummer ab oder 
+            legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch.Name">
+            <summary>
+            Ruft die Auftragsnummer ab oder 
+            legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch.Autor">
+            <summary>
+            Ruft den Autor des Buches ab oder 
+            legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch.Verlag">
+            <summary>
+            Ruft den Verlag ab oder 
+            legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch.BuchPreisgruppe">
+            <summary>
+            Ruft die Daten der Preisgruppe ab
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch.Preis">
+            <summary>
+            Ruft den Preis des Buches ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch.AnzahlBestellt">
+            <summary>
+            Ruft die Anzahl der bestellten Bücher ab
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch.AnzahlGeliefert">
+            <summary>
+            Ruft die Anzahl der bestellten Bücher ab
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunden">
+            <summary>
+            Stellt eine Liste von Kunden Objekten
+            zur verfügung
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde">
+            <summary>
+            Stellt Informationen eines Kunden
+            zur verfügung.
+            </summary>
+            <remarks>Auf das Implementieren der Objekt.GetHashCode() wurde verzichtet
+            die Wahrung des Studios wird ignoriert.</remarks>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.ToString">
+            <summary>
+            Überschreibt die Base.ToStrig()
+            </summary>
+            <returns>Gibt einen Leerstrig zurück!</returns>
+            <remarks>Diese Methode wird verwendet um im Suchfeld des UIs ein
+            leeres Textfeld zu erhalten.</remarks>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.Vorname">
+            <summary>
+            Ruft den Vornamen eines Kunden ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.Nachname">
+            <summary>
+            Ruft den Nachnamen eines Kunden ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.KundenNummer">
+            <summary>
+            Ruft die Kundennummer ab
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.Straße">
+            <summary>
+            Ruft den Straßennamen ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.HausNummer">
+            <summary>
+            Ruft die Hausnummer ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.PLZ">
+            <summary>
+            Ruft die Postleitzahl ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.Stadt">
+            <summary>
+            Ruft den Namen des Wohnortes ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.TelNummer">
+            <summary>
+            Ruft den Telefonnummer des Kunden ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.E_Mail">
+            <summary>
+            Ruft die E-Mail Adresse ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde.Equals(System.Object)">
+            <summary>
+            Vergleicht Übergebene Objekt auf Wertgleichheit.
+            </summary>
+            <param name="obj">Das zu Prüfende Objekt</param>
+            <returns>True wenn das geprüfte Objekt die gleichen werte hat.</returns>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.Manager.BasisDatenManger">
+            <summary>
+            Stellt Die Basisdienste der Managerklassen zur verfügung.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Model.Manager.BasisDatenManger._Controller">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.Manager.BasisDatenManger.Controller">
+            <summary>
+            Ruft den SQL-Controller ab mit dem die
+            Gesamtbestelldaten erzeugt werden
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.Manager.DokumentManager">
+            <summary>
+            Stellt Hilfs Methoden zum Erzeugen von Dokumenten bereit
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.DokumentManager.RechnungsDokumentErzeugen(NiedSchwa.AusstellungsHelfer.Model.DTOs.Bücher,NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellung,NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde,System.Windows.Size)">
+            <summary>
+            Erstellt ein Rechnungsdokument.
+            </summary>
+            <param name="bücher">Bestellpositionen</param>
+            <param name="bestellung">Bestellungsdaten</param>
+            <param name="kunde">Kundendaten</param>
+            <param name="druckgröße">Die Größe des Druckbereichs</param>
+            <returns>Das Erstellte Rechnungsdokument.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.DokumentManager.GesamtBestellungErzeugen(NiedSchwa.AusstellungsHelfer.Model.DTOs.Bücher,NiedSchwa.AusstellungsHelfer.Model.DTOs.Gesamtbestllung,System.Windows.Size)">
+            <summary>
+            Erstellt ein Bestellungsdokument
+            </summary>
+            <param name="bücher">Bestellpositionen</param>
+            <param name="gesamtbestllung">Datenstruktur mit ort und Datumsbereich</param>
+            <param name="druckgröße">Verfügbare Druckgröße</param>
+            <returns></returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.DokumentManager.GesamtBestellungErzeugen(NiedSchwa.AusstellungsHelfer.Model.DTOs.Bücher,System.DateTime,System.DateTime,System.Windows.Size,System.String)">
+            <summary>
+            Erstellt ein Bestellungsdokument
+            </summary>
+            <param name="bücher">Bestellpositionen</param>
+            <param name="druckgröße">Verfügbare Druckgröße</param>
+            <param name="datumBis">Datums Obergrenze</param>
+            <param name="datumVon">Datums Untergrenze</param>
+            <param name="ort">Ort der Veranstaltung</param>
+            <returns>Das Bestellungsdokument.</returns>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.Manager.KundenManager">
+            <summary>
+            Stellt den Dienst zum Verwalten der Kundendaten
+            zur Verfügung.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.KundenManager.NeuenKundenSpeichern(NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde)">
+            <summary>
+            Speichert einen neuen Kunden in die Datenbank.
+            </summary>
+            <param name="kunde">Kundendaten</param>
+            <returns>True wenn das Speichern erfolgreich war.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.KundenManager.SucheKunden(System.String,System.String)">
+            <summary>
+            Erstellt eine Liste gespeicherten Kunden
+            </summary>
+            <param name="nachname">Nachname des Kunden.</param>
+            <param name="vorname">Vorname des Kunden.</param>
+            <returns>Gefundene Kunden</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.KundenManager.SucheKunden(System.Int32)">
+            <summary>
+            Erstellt eine Liste gespeicherten Kunden
+            </summary>
+            <param name="kundennummer">Kundennummer des gesuchten Kunden.</param>
+            <returns>Gefundene Kunden</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.KundenManager.NeuKundeSuchen(System.String,System.String)">
+            <summary>
+            Erstellt eine Liste gespeicherten Kunden
+            </summary>
+            <param name="nachname">Nachname des Kunden.</param>
+            <param name="vorname">Vorname des Kunden.</param>
+            <returns>Gefundene Kunden</returns>
+            <remarks>Es wird der Kunde mit der zu letzt erstellten Kundennummer welche zu den 
+            übergebenen Parametern passt ausgewählt.</remarks>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.Manager.AufgabenManager">
+            <summary>
+            Stellt einen Dienst zum
+            Verwalten der Anwendungspunkte bereit.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.Model.Manager.AufgabenManager._Liste">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Model.Manager.AufgabenManager.Liste">
+            <summary>
+            Ruft die Liste mit den unterstützten
+            Anwendungspunkten ab.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.Manager.BestellungsManager">
+            <summary>
+            Stellt einen Dienst zum verwalten der Kundenbestellungen
+            zur Verfügung
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.BestellungsManager.HoleBuchListe(NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellung)">
+            <summary>
+            Ruft die Bestellung eines Kunden ab
+            </summary>
+            <param name="bestellung">Bestellungsdaten zum suchen der Bücher</param>
+            <returns>Buchliste.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.BestellungsManager.HoleBestellungen(System.Int32)">
+            <summary>
+            Ruft die Aktuelle Bestellliste ab
+            </summary>
+            <param name="kundennummer">Kundennummer für die gesucht werden soll.</param>
+            <returns>Bestellungen des Kunden.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.BestellungsManager.AktualisiereBestellposition(NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch,NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellung)">
+            <summary>
+            Aktualisiert die Anzahl des Gelieferten Buches einer Bestellung
+            </summary>
+            <param name="buch">Buchdaten die Aktualisert werden sollen</param>
+            <param name="bestellung">Bestellungsdaten welche aktualisiert werden sollen.</param>
+            <returns>True wenn erfolgreich Aktualisiert wurde.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.BestellungsManager.NeueBestellungSpeichern(NiedSchwa.AusstellungsHelfer.Model.DTOs.Bücher,NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde,NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellung)">
+            <summary>
+            Speichert eine Neue Bestellung und speichert diese 
+            in der SQL Datenbank ab.
+            </summary>
+            <param name="bücher">Die Bücher der Bestellung</param>
+            <param name="kunde">Der Kunde der die Bestellung aufgibt.</param>
+            <param name="bestellung">Die Daten der Bestellung</param>
+            <returns>1=ok 0=Fehler</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.BestellungsManager.SucheBuch(System.Int32)">
+            <summary>
+            Holt ein Buch und gibt dieses zurück
+            </summary>
+            <param name="buchnummer">Bestellnummer</param>
+            <returns>Das gesuchte Buch</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.BestellungsManager.SucheBücher">
+            <summary>
+            Holt eine Liste mit gespeicherten Büchern
+            </summary>
+            <returns>Das gesuchte Buch</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.BestellungsManager.SuchePreisgruppen">
+            <summary>
+            Holt eine Liste mit gespeicherten Büchern
+            </summary>
+            <returns>Das gesuchte Buch</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.BestellungsManager.BuchSpeichern(NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch)">
+            <summary>
+            Speichert die Buchdaten 
+            </summary>
+            <param name="buch">Zu Speichernde Buchdaten</param>
+            <returns>True wenn erfolgreich gespeichert wurde.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Manager.BestellungsManager.HoleGesamtBuchListe(System.DateTime,System.DateTime)">
+            <summary>
+            Ruft alle Bestellungen während eines 
+            bestimmten Zeitraumes ab
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController">
+            <summary>
+            Stellt den Dienst zum lesen und schreiben der Buchlisten
+            und der Bestellung
+            aus einer SQL Datenbank zur verfügung
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.HohleBücher(System.Int32)">
+            <summary>
+            Ruft eine Liste mit Büchern ab 
+            </summary>
+            <param name="Bestellnummer">Bestellungsnummer des Auftrages</param>
+            <returns>Buchliste des vorhandenen kunden.</returns>
+            <remarks>Gibt eine leeere Buchliste zurück falls der kunde noch keine
+            Bestellungen hat.</remarks>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.HoleBuch(System.Int32)">
+            <summary>
+            Sucht nach einem Buch mit der übergebenen Buchnummer
+            </summary>
+            <param name="buchnummer"></param>
+            <returns>Das gesuchete Buch</returns>
+            <remarks>Gibt ein leeres Buch zurück falls das gesuchte nicht gespeichert ist.</remarks>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.HohleBestellungen(System.Int32)">
+            <summary>
+            Ruft alle Bestellungen die für einen Kunden gespeichert sind ab.
+            </summary>
+            <param name="kundennummer">Kundendaten</param>
+            <returns>Bestellungen des kunden.</returns>
+            <remarks>Gibt eine leere Bestellliste zurück falls noch keine für den kunden gespeichert sind.</remarks>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.NeueBestellungSpeichern(NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellung,System.Int32)">
+            <summary>
+            Speichert eine Bestellung
+            </summary>
+            <param name="bestellung">Die zu speichernde Bestellung</param>
+            <param name="kundennummer">Die Kundennummer für die Bestellung</param>
+            <returns>True wenn Speichern erfolgreich ist.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.BuchpositionenSpeichern(NiedSchwa.AusstellungsHelfer.Model.DTOs.Bücher,System.Int32,System.Int32)">
+            <summary>
+            Speichert die Bücher einer neuen Bestellung in der Datenbank.
+            </summary>
+            <param name="bücher"> Buchliste der Bestellung</param>
+            <param name="kundennummer">Kundennummer</param>
+            <param name="bestellnummer">Bestellnummer falls diese nicht in der Datenbank erstellt wird.</param>
+            <returns>True wenn Speichern erfolgreich ist.</returns>
+            <remarks>Derzeit wird die Bestellnummer beim Speichern in der Datenbank selbst generiert. 
+            Dies könnte auch zu einem Späteren Zeitpunkt von der Applikation durchgefürt werden.</remarks>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.HohleKunden(System.String,System.String)">
+            <summary>
+            Ruft eine Kundenliste ab
+            </summary>
+            <param name="nachname">Nachname des Kunden</param>
+            <param name="vorname">Vorname des Kunden</param>
+            <returns>Eine Kundenliste welche mit dem nachnamen übereinstimmt.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.NeuKundeSuchen(System.String,System.String)">
+            <summary>
+            Ruft eine Kundenliste ab und gibt den letzten erstellten Kunden
+            zurück.
+            </summary>
+            <param name="nachname">Nachname des Kunden</param>
+            <param name="vorname">Vorname des Kunden</param>
+            <returns>Kundneliste</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.HohleKunden(System.Int32)">
+            <summary>
+            Ruft eine Kundenliste die zu der übergebenen Kundennummer passen.
+            </summary>
+            <param name="kundennummer">kundennummer des Kunden</param>
+            <returns>Kundenliste</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.NeuenKundenAnlegen(NiedSchwa.AusstellungsHelfer.Model.DTOs.Kunde)">
+            <summary>
+            Speichert einen Neuen Kunden in die Datenbank.
+            </summary>
+            <param name="kunde">Der zu Speichernde Kunde</param>
+            <returns>True wenn erfolgreich.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.AktualisiereBuchposition(NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch,NiedSchwa.AusstellungsHelfer.Model.DTOs.Bestellung)">
+            <summary>
+            Aktualisert die Bestellte Buchposition.
+            </summary>
+            <param name="buch">Buch welches aktualisiert werden soll.</param>
+            <param name="bestellung">Bestellungsdetails zu diesem Buch</param>
+            <returns>True wenn Aktualisieren erfolgreich war.</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.HoleGesamtBuchListe(System.DateTime,System.DateTime)">
+            <summary>
+            Ruft die gesamten Bestellungen für 
+            einen bestimmten Zeitraum aus der Datenbank ab
+            </summary>
+            <param name="DateFrom">Datumsbereich Anfang</param>
+            <param name="DateTo">Datumsbereich Ende.</param>
+            <returns>Bestellliste</returns>
+            <remarks>Gibt eine leere Buchliste zurück wenn keine Bücher im gesuchten Zeitraum 
+            gefunden werden.</remarks>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.HoleBücher">
+            <summary>
+            Sucht die Lister der Verfügbaren Bücher
+            </summary>
+            <returns>Die gespeicherten Bücher</returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.HoleBuchPreisgruppen">
+            <summary>
+            Holt die Aktuell Verfügbaren Buchpreisgruppen 
+            aus der Datenbank.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Model.Controller.BestellunsSQLController.BuchSpeichern(NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch)">
+            <summary>
+            Speichert das Übergebene Buch in die Datenbank.
+            </summary>
+            <param name="buch">Buchdaten</param>
+            <returns>True wenn erfolfgreich gespeichert wurde.</returns>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel">
+            <summary>
+            Stellt Dienste zum Verwalten der Administrator View zur 
+            Verfügung.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel._AktuellePreisgruppe">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel.AktuellePreisgruppe">
+            <summary>
+            Ruft die Aktuelle Preisgruppe ab oder legt diese fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel._Preisgruppen">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel.Preisgruppen">
+            <summary>
+            Ruft die Aktuell Verfügbaren Preisgruppen ab.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel._Bücher">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel.Bücher">
+            <summary>
+            Ruft eine Buchliste Ab.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel._Buch">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel.Buch">
+            <summary>
+            Ruft die Daten des Buches ab
+            oder legt diese Fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel._BuchSpeichern">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel.BuchSpeichern">
+            <summary>
+            Ruft den Befehl ab, mit dem 
+            Die Buchdaten in die Datenbank geschrieben werden.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel._AlleBücherAbrufen">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel.AlleBücherAbrufen">
+            <summary>
+            Ruft den Befehl ab, mit dem 
+            alle Vorhandenen Bücher abgerufen werden.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel._BücherAktualisieren">
+            <summary>
+            Aktualisiert die Liste der
+            Verfügbaren Bücher.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel.BuchDatenSindVorhanden">
+            <summary>
+            Ruft Den Zustand ob Die Buchdaten Valid sind
+            ab.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.AdministratorViewModel._BuchdatenPrüfen(NiedSchwa.AusstellungsHelfer.Model.DTOs.Buch)">
+            <summary>
+            Prüft die Validität der Bucheingabe.
+            </summary>
+            <param name="buch"></param>
+            <returns>True wenn Daten Korrekt sind.</returns>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.ViewModels.BasisViewModel">
+            <summary>
+            Dient als Viewmodel Basisklasse für 
+            eine Anwendung.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BasisViewModel.FensterManager">
+            <summary>
+            Ruft Die Infrastruktur der Anwendung ab
+            oder legt diese Fest.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel">
+            <summary>
+            Stellt den Dienst zum Verwalten der Bestellungsview zur
+            Verfügung.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._Bestellungen">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.Bestellungen">
+            <summary>
+            Ruft die für den Aktiven Kunden vorhandenen Bestellungen ab.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._Bücher">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.Bücher">
+            <summary>
+            ruft die Aktuelle Bücher ab
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._AktuellesBuch">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.AktuellesBuch">
+            <summary>
+            Ruft das Aktuell Ausgewählte Buch der Aktuellen Buchliste ab
+            oder legt dieses Fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._GesuchtesBuch">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.GesuchtesBuch">
+            <summary>
+            Ruft das Aktuell Gesuchte Buch der Aktuellen Buchliste ab
+            oder legt dieses Fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._Buchnummer">
+            <summary>
+            Internes feld für die Eigenschft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.Buchnummer">
+            <summary>
+            Legt die zu suchende Buchnummer fest
+            oder gibt dieses zurück.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._AnzahlBücherSoll">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.AnzahlBücherSoll">
+            <summary>
+            Ruft die Aktuell zu bestellende Anzahl an büchern ab
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._NeueBestellungAnlegen">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.NeueBestellungAnlegen">
+            <summary>
+            Ruft den Befehl ab, mit dem 
+            eine neue Bestellung angelegt werden kann.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._AktuelleBestellung">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.AktuelleBestellung">
+            <summary>
+            Ruft die Aktuelle Bestellung für den Aktuellen kunden ab
+            oder legt diese fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._BuchHinzufügen">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.BuchHinzufügen">
+            <summary>
+            Ruft den Befehl ab, mit dem 
+            ein Buch der Neuen Bestellung hizugefügt wird.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._BuchPositionLöschen">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.BuchPositionLöschen">
+            <summary>
+            Ruft den Befehl ab, mit dem 
+            die noch unbestellte Buchposition gelöscht werden kann.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._PositionÄndern">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.PositionÄndern">
+            <summary>
+            Ruft den Befehl ab, mit dem 
+            die noch unbestellte Buchposition gelöscht werden kann.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel._BestellungSpeichern">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.BestellungSpeichern">
+            <summary>
+            Ruft den Befehl ab, mit dem 
+            eine Bestellung in der Datenbank gespeichert wird.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.BestellungZurücksetzen">
+            <summary>
+            Setzt die Bestellungen auf Null
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel.BestellungenAktualisieren(System.Int32)">
+            <summary>
+            Aktualisert die Bestellungen
+            </summary>       
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel">
+            <summary>
+            Stellt den Dienst zum Verwalten der Kundenview zur
+            verfügung
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel._AktuellerKunde">
+            <summary>
+            Internes Feld für die Eigenschft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel.AktuellerKunde">
+            <summary>
+            Ruft den derzeit aktiven Kunden ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel.KundenSuchName">
+            <summary>
+            Legt den Aktuellen kunden Suchnamen fest.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel._AktualisiereKunden(System.String,System.String)">
+            <summary>
+            Erzeugt eine Kundenliste
+            </summary>
+            <param name="nachname">Nachname des Kunden.</param>
+            <param name="vorname">Vorname des Kunden.</param>
+            <returns>Kundenliste</returns>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel._AktuelleKunden">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel.AktuelleKunden">
+            <summary>
+            Ruft die Aktuell verfügbare Kundenliste ab
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel._KundeAnlegen">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel.KundeAnlegen">
+            <summary>
+            Ruft den Befehl ab, mit dem 
+            ein neuer Kunde angelegt werden kann.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel.KundeIstGesetzt">
+            <summary>
+            Prüft ob die Aktuellen Eingaben der Kundenfelder
+            Valid sind. 
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel._KundeSpeichern">
+            <summary>
+            Speichert die Eingaben der Kundenfelder in der Datenbank ab.
+            </summary>
+            <returns>True wenn erfolgreich gespeichert wurde.</returns>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel._KundenfelderLeeren">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel.KundenfelderLeeren">
+            <summary>
+            Ruft den Befehl ab, mit dem 
+            ein neuer Kunde angelegt werden kann.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel._KundenfelderReset">
+            <summary>
+            Setzt alle KundenDaten auf null.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager">
+            <summary>
+            Stellt den Dienst zum verwalten des Fensters 
+            zur Verfügung
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager._FensterTyp">
+            <summary>
+            Wird vom Starten initialisiert und
+            beim Anzeigen eines neuens Fensters benötigt.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager.Starten``1">
+            <summary>
+            Zeigt ein Fenster des gewünschten Typs an
+            und macht es zum Hauptfenster der WPF Anwendung.
+            </summary>
+            <typeparam name="T">Der Typ der anzuzeigenden View.</typeparam>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager.InitialisiereFenster(System.Windows.Window)">
+            <summary>
+            Bereitet ein Fenster für die Anzeige vor.
+            </summary>
+            <param name="fenster">Das Fenster-Objekt,
+            das vorbereitet werden soll.</param>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager.AktuelleSprache">
+            <summary>
+            Ruft die aktuelle Anwendungssprache
+            ab oder legt diese fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager._Aufgaben">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager.Aufgaben">
+            <summary>
+            Ruft die Anwendungspunkte ab.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager._AktuelleAufgabe">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager.AktuelleAufgabe">
+            <summary>
+            Ruft den aktuellen Anwendungspunkt
+            ab oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager._GesamtBestellungsViewModel">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager.GesamtBestellungsViewModel">
+            <summary>
+            Ruft das ViewModel für die Gesamtbestellungs View ab.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager._BestellungsViewModel">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager.BestellungsViewModel">
+            <summary>
+            Ruft das ViewModel für die Gesamtbestellungs View ab.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager._KundenViewModel">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager.KundenViewModel">
+            <summary>
+            Ruft das ViewModel für die Gesamtbestellungs View ab.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager._AdministratorViewModel">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.FensterManager.AdministratorViewModel">
+            <summary>
+            Ruft das ViewModel für die AdministratorView auf.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel">
+            <summary>
+            Stellt den Dienst zum Verwalten des
+            Gesamtbestellungsview zur Verfügung.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel._GesamtBuchListe">
+            <summary>
+            Feld für die interne Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel.GesamtBuchListe">
+            <summary>
+            Stellt eine Gesamtliste aller Bestellpositionen
+            zur Verfügung
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel._DatumVon">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel.DatumVon">
+            <summary>
+            Ruft Aktuelle Obergrenze des Suchdatumsbereichs ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel._DatumBis">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel.DatumBis">
+            <summary>
+            Ruft Aktuelle Untergrenze des Suchdatumsbereichs ab
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel._GesamtBuchlisteAktualisieren(System.DateTime,System.DateTime)">
+            <summary>
+            Aktualisiert die Gesamtbestellliste im Aktuellen
+            Datumsbereich.
+            </summary>
+            <param name="datumVon">Datums Obergrenze</param>
+            <param name="datumBis">Datums Untergrenze</param>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel._DatumPrüfen(System.DateTime,System.DateTime)">
+            <summary>
+            Prüft ob das Eingegebenen Datum vor dem bis liegt 
+            und sendet eine Benachrichtigung an den User.
+            </summary>
+            <param name="von">Datums Untergrenze</param>
+            <param name="bis">Datums Obergrenze</param>
+            <returns>True wenn Datumseingabe in ordnung ist.</returns>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel._GesammtbestellungDrucken">
+            <summary>
+            Internes Feld für die Eigenschaft.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel.GesammtbestellungDrucken">
+            <summary>
+            Ruft den Befehl ab, mit dem 
+            die noch unbestellte Buchposition gelöscht werden kann.
+            </summary>
+        </member>
+        <member name="F:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel._Veranstaltungsort">
+            <summary>
+            Internes Feld für die Eigenschaft
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.ViewModels.GesamtBestellungsViewModel.Veranstaltungsort">
+            <summary>
+            Ruft den Aktuellen Veranstaltungsort auf 
+            oder legt diesen fest.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.ViewModels.KundenBestellungsViewModel">
+            <summary>
+            Stellt den Dienst zum Verwalten des KundenBestellungs Views zur verfügung
+            </summary>
+            <remarks> Dieses ViewModel wurde durch 2 ViewModels
+             <seealso cref="T:NiedSchwa.AusstellungsHelfer.ViewModels.KundenViewModel"/> und <seealso cref="T:NiedSchwa.AusstellungsHelfer.ViewModels.BestellungsViewModel"/>
+             geteilt.</remarks>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Views.AdministratorView">
+            <summary>
+            Interaktionslogik für AdministratorView.xaml
+            </summary>
+            <summary>
+            AdministratorView
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Views.AdministratorView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.AufgabenView">
+            <summary>
+            Interaktionslogik für AufgabenView.xaml
+            </summary>
+            <summary>
+            AufgabenView
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.AufgabenView.#ctor">
+            <summary>
+            Initialisiert Den Arbeitsbereich
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.AufgabenView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.GesamtBestellungsView">
+            <summary>
+            Interaktionslogik für GesamtBestellungsView.xaml
+            </summary>
+            <summary>
+            GesamtBestellungsView
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.GesamtBestellungsView.#ctor">
+            <summary>
+            Initialisiert eine BestellungsView
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.GesamtBestellungsView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.KundenBestellungsViev">
+            <summary>
+            Interaktionslogik für KundenBestellungsViev.xaml
+            </summary>
+            <summary>
+            KundenBestellungsViev
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.KundenBestellungsViev.#ctor">
+            <summary>
+            Initialisiert eine BestellungsView
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.KundenBestellungsViev.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.KundenView">
+            <summary>
+            Interaktionslogik für KundenView.xaml
+            </summary>
+            <summary>
+            KundenView
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.KundenView.#ctor">
+            <summary>
+            Initialisiert Ein KundenView Controll
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.KundenView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Properties.Texte">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Properties.Texte.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Properties.Texte.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Properties.Texte.Anwendungstitel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die Buchaustellungshelfer ähnelt.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Properties.Texte.Sprachwechsel">
+            <summary>
+              Sucht eine lokalisierte Zeichenfolge, die To change Language restart Application... ähnelt.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Properties.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Properties.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:NiedSchwa.AusstellungsHelfer.Properties.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenlookups, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+        <member name="T:NiedSchwa.AusstellungsHelfer.Hauptfenster">
+            <summary>
+            Interaktionslogik für Hauptfenster.xaml
+            </summary>
+            <summary>
+            Hauptfenster
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Hauptfenster.#ctor">
+            <summary>
+            Initialisiert ein neues Hauptfenster
+            </summary>
+        </member>
+        <member name="M:NiedSchwa.AusstellungsHelfer.Hauptfenster.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

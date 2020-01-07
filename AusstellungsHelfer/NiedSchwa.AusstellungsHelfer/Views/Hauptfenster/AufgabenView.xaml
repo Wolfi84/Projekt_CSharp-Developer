@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="NiedSchwa.AusstellungsHelfer.AufgabenView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NiedSchwa.AusstellungsHelfer"
+      mc:Ignorable="d" 
+      MinHeight="450"
+      MinWidth="800"
+
+           
+     d:DesignHeight="450" d:DesignWidth="800"               
+    
+     >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <ListBox
+            Grid.Column="0"
+            Background="Transparent"
+            BorderThickness="0"
+            Margin="3,3,3,3"
+            
+            ItemsSource="{Binding Aufgaben}"
+            SelectedItem="{Binding AktuelleAufgabe}"
+            
+            FontSize="12pt">
+
+            <!-- Das Aussehen einer Aufgabe einstellen -->
+            <ListBox.ItemTemplate>
+                <!-- Das DataTemplate überschreibt den
+                     DataContext und hier bezieht sich
+                     die Bindung auf eine Aufgabe-->
+                <DataTemplate>
+                    <StackPanel
+                        Orientation="Horizontal"
+                        >
+                        <Label
+                            FontFamily="Wingdings"
+                            FontSize="16pt"
+                            Content="{Binding Symbol}"
+                            Width="1"
+                            
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            
+                            />
+                        <Label 
+                            Content="{Binding Name}"
+                            VerticalContentAlignment="Center"
+                            />
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+
+        </ListBox>
+
+        <ContentControl 
+            Grid.Column="1"
+            Grid.Row="0"
+            Margin="3,3,3,3"
+            Content="{Binding AktuelleAufgabe.Arbeitsbereich}"
+            VerticalContentAlignment="Top"
+            Background="Transparent"
+            />
+
+
+    </Grid>
+</UserControl>
