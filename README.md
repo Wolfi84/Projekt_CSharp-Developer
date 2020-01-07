@@ -12,7 +12,7 @@ Abschlussprojekt des C# Software Developer Kurses
     
   * Datenbank
     - Datenbankdatei
-    - Die Datenbankdatei als zip (Sollte einmal etwas schief gehen)
+    - Die Datenbankdatei als zip (sollte einmal etwas schief gehen)
   
   * Lastenheft_Pflichtenheft
     - Lastenheft als pdf
